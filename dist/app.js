@@ -160,6 +160,7 @@ class ProjectList extends Component {
         }
     }
     dropHandler(event) {
+        event.preventDefault();
         const prjId = event.dataTransfer.getData("text/plain");
         projectState.moveProject(prjId, this.type === "active" ? ProjectStatus.Active : ProjectStatus.Finished);
     }

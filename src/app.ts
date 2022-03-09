@@ -271,6 +271,7 @@ class ProjectList
 
   @autobind
   dropHandler(event: DragEvent) {
+    event.preventDefault();
     const prjId = event.dataTransfer!.getData("text/plain");
     projectState.moveProject(
       prjId,
